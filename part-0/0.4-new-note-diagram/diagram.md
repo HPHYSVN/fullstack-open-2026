@@ -6,7 +6,7 @@ sequenceDiagram
     U->>B: write something into form & click Save
     B->>S: POST /new_note
     activate S
-    Note right of Server: Save note to array </br> Return 302 Redirect
+    Note right of S: Save note to array </br> Return 302 Redirect
     S-->>B: HTTP 302 (Location: /notes)
     deactivate S
 
@@ -19,7 +19,7 @@ sequenceDiagram
 
     B->>S: GET /main.css
     activate S
-    S->>B: CSS file
+    S-->>B: CSS file
     deactivate S
 
     B->>S: GET /main.js
